@@ -1,22 +1,9 @@
 .btn {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  // color: #fcfcfc;
-  // svg {
-  //   width: 20px;
-  // // }
-  // &:before {
-  //   content: "";
-  //   display: inline-block;
-  //   position: absolute;
-  //   top: -10px;
-  //   right: -10px;
-  //   width: 40px;
-  //   height: 40px;
-  //   border-radius: 50%;
-  //   background-color: #2b2531;
-  //   z-index: -1;
-  // }
 }
 
 .btn--settings {
@@ -24,12 +11,16 @@
   border: 1px solid #d5d8dd;
   width: 32px;
   height: 32px;
-  img {
-  }
 }
 
-.btn--inputSearch {
-  color: #d5d8dd;
+.btn--pin {
+  width: 32px;
+  height: 32px;
+}
+
+.btn--openTab {
+  width: 16px;
+  height: 16px;
 }
 
 .btn:hover {

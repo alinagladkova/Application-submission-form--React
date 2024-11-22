@@ -12,7 +12,7 @@ export default function Input({ type, placeholder, icon }) {
   return (
     <div className={cn(styles.input)}>
       <input className={cn(styles[`input__inner`])} type={type} placeholder={placeholder}></input>
-      <Button use="inputSearch" icon="Padding.png"></Button>
+      <Button use="inputSearch" icon={icon}></Button>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function Header() {
       </div>
       <div className={cn(styles[`header__control`])}>
         <div className={cn(styles[`header__search`])}>
-          <Input placeholder="Поиск" icon="Padding.png"></Input>
+          <Input type="text" placeholder="Поиск" icon="Padding.png"></Input>
         </div>
         <div className={cn(styles[`header__user-info`])}>
           <div className={cn(styles[`header__user-avatar`])}>
@@ -26,3 +26,5 @@ export default function Header() {
     </div>
   );
 }
+
+//сделать тень шапки при скролле

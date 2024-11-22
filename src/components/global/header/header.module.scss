@@ -5,13 +5,16 @@
   align-items: center;
   padding: 8px 16px;
   border-bottom: 1px solid #d5d8dd;
-
+  &__logo {
+    cursor: pointer;
+  }
   &__control {
     display: flex;
     justify-content: center;
     align-items: center;
   }
   &__search {
+    min-width: 296px;
   }
   &__user-info {
     display: flex;
@@ -33,13 +36,4 @@
   &__button {
     margin-left: 8px;
   }
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   height: 1px;
-  //   width: 100%;
-  //   bottom: 0;
-  //   left: 0;
-  //   background-color: #d5d8dd;
-  // }
 }

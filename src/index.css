@@ -6,6 +6,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 } */
