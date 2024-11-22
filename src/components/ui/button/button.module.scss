@@ -1,0 +1,38 @@
+.btn {
+  position: relative;
+  cursor: pointer;
+  // color: #fcfcfc;
+  // svg {
+  //   width: 20px;
+  // // }
+  // &:before {
+  //   content: "";
+  //   display: inline-block;
+  //   position: absolute;
+  //   top: -10px;
+  //   right: -10px;
+  //   width: 40px;
+  //   height: 40px;
+  //   border-radius: 50%;
+  //   background-color: #2b2531;
+  //   z-index: -1;
+  // }
+}
+
+.btn--settings {
+  border-radius: 4px;
+  border: 1px solid #d5d8dd;
+  width: 32px;
+  height: 32px;
+  img {
+  }
+}
+
+.btn--inputSearch {
+  color: #d5d8dd;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 2px grey;
+  border: 1px solid #0078cf;
+}
