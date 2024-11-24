@@ -45,10 +45,10 @@ export default function Sidebar() {
       <div className={cn(styles[`sidebar__main-panel`])} style={{ display: `${isHidden ? "inline-block" : "none"}` }}>
         <div className={cn(styles[`sidebar__search-field`])}>
           <div className={cn(styles[`sidebar__search`])}>
-            <Input type="text" placeholder="Поиск по меню" icon="filter.png" />
+            <Input type="text" placeholder="Поиск по меню" use="inputFilter" icon="filter.png" />
           </div>
           <div className={cn(styles[`sidebar__btn-pin`])}>
-            <Button use="pin" icon="Default Button.png" />
+            <Button use="pin" icon="Pin.png" />
           </div>
         </div>
         <div className={cn(styles[`sidebar__tabs`])}>

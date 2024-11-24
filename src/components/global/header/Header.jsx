@@ -11,7 +11,7 @@ export default function Header() {
       </div>
       <div className={cn(styles[`header__control`])}>
         <div className={cn(styles[`header__search`])}>
-          <Input type="text" placeholder="Поиск" icon="Padding.png"></Input>
+          <Input type="text" placeholder="Поиск" use="inputSearch" icon="inputSearch.png"></Input>
         </div>
         <div className={cn(styles[`header__user-info`])}>
           <div className={cn(styles[`header__user-avatar`])}>
