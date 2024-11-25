@@ -8,5 +8,3 @@ export default function Button({ use, icon, text, handler }) {
     </button>
   );
 }
-
-//hover переделать

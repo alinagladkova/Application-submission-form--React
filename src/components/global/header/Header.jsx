@@ -1,9 +1,14 @@
 import cn from "classnames";
 import styles from "./header.module.scss";
-import Input from "../../ui/input/Input";
+import Search from "../../ui/search/Search";
 import Button from "../../ui/button/Button";
 
 export default function Header() {
+  const serchHandler = (e, inputValue) => {
+    e.preventDefault();
+    console.log(inputValue);
+  };
+
   return (
     <div className={cn(styles.header)}>
       <div className={cn(styles[`header__logo`])}>
@@ -11,7 +16,7 @@ export default function Header() {
       </div>
       <div className={cn(styles[`header__control`])}>
         <div className={cn(styles[`header__search`])}>
-          <Input type="text" placeholder="Поиск" use="inputSearch" icon="inputSearch.png"></Input>
+          <Search type="text" placeholder="Поиск" use="inputSearch" icon="inputSearch.png" inputHandler={serchHandler}></Search>
         </div>
         <div className={cn(styles[`header__user-info`])}>
           <div className={cn(styles[`header__user-avatar`])}>
@@ -20,11 +25,9 @@ export default function Header() {
           <p className={cn(styles[`header__user-name`])}>Максим Галактионов</p>
         </div>
         <div className={cn(styles[`header__button`])}>
-          <Button use="settings" icon="Vector.png"></Button>
+          <Button use="settings" icon="settings.png"></Button>
         </div>
       </div>
     </div>
   );
 }
-
-//сделать тень шапки при скролле

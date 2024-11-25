@@ -1,6 +1,6 @@
 import cn from "classnames";
 import styles from "./sidebar.module.scss";
-import Input from "../../ui/input/Input";
+import Search from "../../ui/search/Search";
 import Button from "../../ui/button/Button";
 import { useState } from "react";
 import Tab from "../tab/Tab";
@@ -27,9 +27,16 @@ const tabArray = [
 
 export default function Sidebar() {
   const [isHidden, setIsHidden] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   const setStateIsHidden = () => {
     setIsHidden((prev) => !prev);
+  };
+
+  const searchHandler = (e, inputValue) => {
+    e.preventDefault();
+    setInputValue(inputValue);
+    console.log(inputValue);
   };
 
   return (
@@ -45,7 +52,7 @@ export default function Sidebar() {
       <div className={cn(styles[`sidebar__main-panel`])} style={{ display: `${isHidden ? "inline-block" : "none"}` }}>
         <div className={cn(styles[`sidebar__search-field`])}>
           <div className={cn(styles[`sidebar__search`])}>
-            <Input type="text" placeholder="Поиск по меню" use="inputFilter" icon="filter.png" />
+            <Search type="text" placeholder="Поиск по меню" use="inputFilter" icon="filter.png" inputHandler={searchHandler} />
           </div>
           <div className={cn(styles[`sidebar__btn-pin`])}>
             <Button use="pin" icon="Pin.png" />
@@ -54,7 +61,7 @@ export default function Sidebar() {
         <div className={cn(styles[`sidebar__tabs`])}>
           <ul className={cn(styles[`sidebar__tabs-list`])}>
             {tabArray.map((title) => (
-              <Tab key={title} text={title} />
+              <Tab key={title} text={title} inputValue={inputValue} />
             ))}
           </ul>
         </div>

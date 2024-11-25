@@ -1,0 +1,20 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 32px;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  border: 1px solid #d5d8dd;
+  &__input {
+    width: 100%;
+    font-size: 14px;
+    margin-right: 4px;
+  }
+}
+
+input::placeholder {
+  color: #abb1ba;
+  font-size: 14px;
+}
