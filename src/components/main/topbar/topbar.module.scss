@@ -30,3 +30,25 @@
     font-size: 24px;
   }
 }
+
+@media (max-width: 767px) {
+  .topbar {
+    &__title {
+      font-size: 20px;
+    }
+    &__column {
+      width: 100%;
+    }
+    &__column--last {
+      display: none;
+    }
+    &__mini-task {
+      font-family: "Open sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 14px;
+      margin-right: 12px;
+      line-height: 20px;
+    }
+  }
+}

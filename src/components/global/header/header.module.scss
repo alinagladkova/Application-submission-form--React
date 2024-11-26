@@ -1,5 +1,4 @@
 .header {
-  // position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -38,5 +37,28 @@
   }
   &__button {
     margin-left: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    justify-content: flex-end;
+    height: 56px;
+    &__search {
+      display: none;
+    }
+    &__user-name {
+      display: none;
+    }
+    &__logo {
+      display: none;
+    }
+    &__user-avatar {
+      width: 24px;
+      height: 24px;
+    }
+    &__button {
+      margin-left: 16px;
+    }
   }
 }

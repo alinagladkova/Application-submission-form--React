@@ -17,7 +17,7 @@ export default function Topbar({ inputValue, openModal }) {
             <Button use="createTask" text="Создать" handler={openModalHandler} />
           </div>
         </div>
-        <div className={cn(styles[`topbar__column`])}>
+        <div className={cn(styles[`topbar__column`], styles[`topbar__column--last`])}>
           <div className={cn(styles[`topbar__btn`])}>
             <Button use="save" text="Сохранить" submit />
           </div>

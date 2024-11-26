@@ -40,8 +40,31 @@
     width: 32px;
     height: 32px;
   }
-  &__tabs {
-  }
-  &__tabs-list {
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    &__hide-panel {
+      width: 32px;
+      height: 50px;
+      border-right: none;
+      margin-left: 8px;
+    }
+    &__btn {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__main-panel {
+      position: absolute;
+      top: 56px;
+      left: 0;
+      background-color: #fff;
+      z-index: 200;
+    }
   }
 }
