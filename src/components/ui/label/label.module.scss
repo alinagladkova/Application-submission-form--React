@@ -1,0 +1,14 @@
+.label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.label--required:before {
+  content: "*";
+  position: relative;
+  top: 0;
+  font-size: 13px;
+  color: #b21f00;
+  margin-right: 4px;
+  font-weight: 600;
+}

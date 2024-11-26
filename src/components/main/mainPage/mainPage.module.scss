@@ -1,14 +1,5 @@
 .main-page {
   // height: 2000px; //для проверки
   position: relative;
-  margin: 0 8px 20px 8px;
-  &__topbar {
-    position: sticky;
-    top: 5px;
-    background-color: #fff;
-    z-index: 99;
-    margin: 16px 8px 24px 8px;
-  }
-  &__content {
-  }
+  margin: 0 8px 100px 8px;
 }

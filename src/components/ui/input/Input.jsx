@@ -1,17 +1,24 @@
 import cn from "classnames";
 import styles from "./input.module.scss";
+import { useState } from "react";
+import Label from "../label/Label";
 
-export default function Input({ type, placeholder, label, hidden, inputHandler }) {
+export default function Input({ type, placeholder, id, name, label, hidden, required, inputHandler = () => {} }) {
+  const [value, setValue] = useState("");
+
   const inputAction = (e) => {
+    e.preventDefault();
+    setValue(e.target.value.trim());
+
     if (type === "text") {
-      return inputHandler(e, e.target.value.trim());
+      return inputHandler(e.target.value.trim());
     }
   };
 
   return (
-    <label className={cn(styles.input)}>
-      {label}
-      <input className={cn(styles[`input__field`])} type={type} placeholder={placeholder} hidden={hidden} onChange={inputAction}></input>
-    </label>
+    <>
+      <Label label={label} id={id} required={required ? true : false} />
+      <input className={cn(styles[`input__field`])} name={name} id={id} type={type} placeholder={placeholder} hidden={hidden} onChange={inputAction}></input>
+    </>
   );
 }

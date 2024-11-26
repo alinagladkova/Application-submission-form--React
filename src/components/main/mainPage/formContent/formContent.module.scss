@@ -1,56 +1,81 @@
 .form-content {
   &__task-description {
     display: flex;
-    align-items: start;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-  }
-  &__column {
-    width: 100%;
-    margin: 0 8px;
   }
   &__task-input {
+    width: calc(50% - 16px);
+    margin: 0 8px;
     margin-bottom: 16px;
-    width: 100%;
   }
   &__task-select {
+    width: calc(50% - 16px);
+    margin: 0 8px;
     margin-bottom: 16px;
+  }
+  &__long-input {
+    margin: 0 8px 16px 8px;
+  }
+  &__task-search {
+    display: flex;
+    width: calc(50% - 16px);
+    justify-content: space-between;
+    margin: 0 8px;
+    margin-bottom: 16px;
+  }
+  &__search-input {
     width: 100%;
   }
-  &__comments {
-    margin: 0 8px;
+  &__task-search-btn {
+    margin-top: 29px;
+    margin-left: 4px;
   }
-  &__coordinating {
-    margin: 0 8px;
-  }
+
+  // &__inner-date {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   width: 100%;
+  //   position: relative;
+  // }
+
   &__date {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: start;
-    margin: 0 8px;
-    :first-child {
-      margin-right: 16px;
-    }
+    width: 100%;
   }
   &__creator {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: start;
-    margin: 0 4px;
-    :first-child {
-      margin-right: 4px;
+    width: 100%;
+  }
+  &__btn {
+    margin-left: 4px;
+  }
+  // &__date-btn {
+  //   visibility: hidden;
+  //   position: absolute;
+  //   right: 0;
+  //   margin-left: 4px;
+  //   margin-top: 14px;
+  //   z-index: 1;
+  // }
+}
+
+@media (max-width: 991px) {
+  .form-content {
+    &__task-input {
+      width: 100%;
     }
-    :last-child {
-      margin-left: 4px;
+    &__task-search {
+      width: 100%;
+    }
+    &__task-select {
+      width: 100%;
     }
   }
-}
-.form-content__task-input--necessary:before {
-  content: "*";
-  position: relative;
-  top: 0;
-  font-size: 13px;
-  color: #b21f00;
-  margin-right: 4px;
-  font-weight: 600;
 }

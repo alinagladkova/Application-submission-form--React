@@ -1,0 +1,9 @@
+.form {
+  &__topbar {
+    position: sticky;
+    top: 5px;
+    background-color: #fff;
+    z-index: 99;
+    margin: 16px 8px 24px 8px;
+  }
+}

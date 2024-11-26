@@ -12,11 +12,13 @@
 .btn--settings,
 .btn--pin,
 .btn--addOption,
-.btn--searchForOption {
+.btn--searchForOption,
+.btn--openCalendar {
   width: 32px;
   height: 32px;
   &:hover {
-    box-shadow: 2px 3px 3px #d5d8dd;
+    box-shadow: 2px 3px 3px #b5b7bb;
+    background-color: #d5d8dd;
   }
 }
 
@@ -26,7 +28,9 @@
 .btn--inputFilter,
 .btn--openTab,
 .btn--showOptions,
-.btn--clear {
+.btn--clear,
+.btn--clearOptions,
+.btn--closeTag {
   border: none;
 }
 
