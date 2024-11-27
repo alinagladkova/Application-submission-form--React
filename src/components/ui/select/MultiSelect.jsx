@@ -8,7 +8,6 @@ import Button from "../button/Button";
 export default function MultiSelect({ title, mockData, id, name }) {
   const [isShown, setIsShown] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(true);
-
   const [inputValue, setInputValue] = useState("");
   const [selectedOptions, setSelectedOptions] = useState([]);
 
@@ -98,6 +97,7 @@ export default function MultiSelect({ title, mockData, id, name }) {
             <Search use="clear" icon="close-circle.png" type="text" inputHandler={inputHandler} handler={clearInputSearch} />
           </div>
           <div className={cn(styles[`select__options-list`])}>
+            {console.log(inputValue)}
             {mockData
               .filter((user) => {
                 if (inputValue !== undefined) return user.value.toLowerCase().includes(inputValue.toLowerCase());

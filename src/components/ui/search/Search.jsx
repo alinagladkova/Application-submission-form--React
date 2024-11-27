@@ -10,7 +10,7 @@ export default function Search({ type, placeholder, use, icon, inputHandler, han
     e.preventDefault();
     setValue(e.target.value.trim());
     if (type === "text") {
-      return inputHandler(e, e.target.value.trim());
+      return inputHandler(e.target.value.trim());
     }
   };
 
