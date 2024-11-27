@@ -46,7 +46,7 @@ export default function Sidebar() {
           <Button use="hide" icon="Hide.png" handler={setStateIsHidden} />
         </div>
         <div className={cn(styles[`sidebar__btn`])}>
-          <Button use="star" icon="star.png" />
+          <Button use="star" icon="Star.png" />
         </div>
       </div>
       <div className={cn(styles[`sidebar__main-panel`], isHidden ? styles[`sidebar__main-panel--open`] : "")}>
