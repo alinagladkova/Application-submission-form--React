@@ -5,6 +5,7 @@ import Button from "../../ui/button/Button";
 import { useState } from "react";
 import Tab from "../tab/Tab";
 
+//сделаем вручную вкладки
 const tabArray = [
   "Моя работа",
   "Структура портала",
@@ -33,10 +34,8 @@ export default function Sidebar() {
     setIsHidden((prev) => !prev);
   };
 
-  const searchHandler = (e, inputValue) => {
-    e.preventDefault();
+  const searchHandler = (inputValue) => {
     setInputValue(inputValue);
-    console.log(inputValue);
   };
 
   return (
@@ -49,7 +48,7 @@ export default function Sidebar() {
           <Button use="star" icon="star.png" />
         </div>
       </div>
-      <div className={cn(styles[`sidebar__main-panel`])} style={{ display: `${isHidden ? "inline-block" : "none"}` }}>
+      <div className={cn(styles[`sidebar__main-panel`], isHidden ? styles[`sidebar__main-panel--open`] : "")}>
         <div className={cn(styles[`sidebar__search-field`])}>
           <div className={cn(styles[`sidebar__search`])}>
             <Search type="text" placeholder="Поиск по меню" use="inputFilter" icon="filter.png" inputHandler={searchHandler} />
@@ -69,6 +68,3 @@ export default function Sidebar() {
     </div>
   );
 }
-
-//transition почему-то не работает
-//активная кнопка подсвечена синим цветом

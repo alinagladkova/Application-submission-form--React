@@ -4,7 +4,7 @@ import Input from "../../../ui/input/Input";
 import { mockUsers, mockGroups } from "../../../../mockData/mockData";
 import MultiSelect from "../../../ui/select/MultiSelect";
 import { v4 as uuidv4 } from "uuid";
-import Search from "../../../ui/search/Search";
+
 import Button from "../../../ui/button/Button";
 
 export default function FormContent({ inputValueHandler }) {
@@ -19,7 +19,7 @@ export default function FormContent({ inputValueHandler }) {
   return (
     <div className={cn(styles[`form-content`])}>
       <div className={cn(styles[`form-content__task-description`])}>
-        <fieldset className={cn(styles[`form-content__task-input`], styles[`form-content__task-input--necessary`])}>
+        <fieldset className={cn(styles[`form-content__task-input`])}>
           <Input type="text" label="Тема" inputHandler={handleInputValue} id={uuidv4()} name="theme" required="true" />
         </fieldset>
         <fieldset className={cn(styles[`form-content__task-input`])}>
@@ -36,7 +36,7 @@ export default function FormContent({ inputValueHandler }) {
             <Button use="searchForOption" icon="selectorSearch.png" />
           </div>
         </fieldset>
-        <fieldset className={cn(styles[`form-content__task-input`], styles[`form-content__task-input--necessary`])}>
+        <fieldset className={cn(styles[`form-content__task-input`])}>
           <Input type="text" label="Рабочие заметки" id={uuidv4()} name="notes" required="true" />
         </fieldset>
         <fieldset className={cn(styles[`form-content__task-input`])}>
@@ -61,9 +61,7 @@ export default function FormContent({ inputValueHandler }) {
       </div>
       <div className={cn(styles[`form-content__date`])}>
         <fieldset className={cn(styles[`form-content__task-input`])}>
-          {/* <div className={cn(styles[`form-content__task-input`])}> */}
           <Input type="date" label="Когда открыто" id={uuidv4()} name="dateOpen" />
-          {/* </div> */}
         </fieldset>
         <fieldset className={cn(styles[`form-content__task-input`])}>
           <Input type="date" label="Когда создано" id={uuidv4()} name="dateCreate" />
@@ -79,10 +77,4 @@ export default function FormContent({ inputValueHandler }) {
       </div>
     </div>
   );
-}
-
-{
-  /* <div className={cn(styles[`form-content__date-btn`])}>
-            <Button use="openCalendar" icon="calendar.png" />
-          </div> */
 }

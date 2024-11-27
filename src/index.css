@@ -12,6 +12,8 @@ body {
 #root {
   max-width: 1920px;
   margin: 0 auto;
+
+  /* overflow: hidden; */
 }
 
 .app {
@@ -20,6 +22,6 @@ body {
 
 .content {
   position: relative;
+  height: 100%;
   width: 100%;
-  overflow: hidden;
 }

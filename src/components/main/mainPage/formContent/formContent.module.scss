@@ -32,15 +32,6 @@
     margin-top: 29px;
     margin-left: 4px;
   }
-
-  // &__inner-date {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   width: 100%;
-  //   position: relative;
-  // }
-
   &__date {
     display: flex;
     flex-wrap: wrap;
@@ -56,14 +47,6 @@
   &__btn {
     margin-left: 4px;
   }
-  // &__date-btn {
-  //   visibility: hidden;
-  //   position: absolute;
-  //   right: 0;
-  //   margin-left: 4px;
-  //   margin-top: 14px;
-  //   z-index: 1;
-  // }
 }
 
 @media (max-width: 991px) {

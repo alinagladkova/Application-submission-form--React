@@ -3,7 +3,6 @@
   justify-content: flex-start;
   align-items: start;
   height: 100vh;
-  max-width: 336px;
   &__hide-panel {
     width: 56px;
     height: 100vh;
@@ -23,7 +22,10 @@
   &__main-panel {
     height: 100vh;
     border-right: 1px solid #d5d8dd;
-    // transition: display 2s 1s;
+    display: none;
+  }
+  &__main-panel--open {
+    display: block;
   }
   &__search-field {
     display: flex;

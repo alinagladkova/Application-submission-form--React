@@ -13,7 +13,8 @@
 .btn--pin,
 .btn--addOption,
 .btn--searchForOption,
-.btn--openCalendar {
+.btn--openCalendar,
+.btn--closeModal {
   width: 32px;
   height: 32px;
   &:hover {
@@ -55,5 +56,12 @@
     font-weight: 400;
     background-color: #0078cf;
     color: #fff;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn--save,
+  .btn--cancel {
+    width: 100%;
   }
 }

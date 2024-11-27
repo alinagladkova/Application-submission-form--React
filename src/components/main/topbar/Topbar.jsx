@@ -3,18 +3,13 @@ import styles from "./topbar.module.scss";
 import Button from "../../ui/button/Button";
 
 export default function Topbar({ inputValue, openModal }) {
-  const openModalHandler = () => {
-    openModal();
-  };
-
   return (
-    // {style={{ boxShadow: `${isScrolled ? "2px 2px 3px gray" : "none"}` }}}
     <div className={cn(styles.topbar)} onScroll={(event) => console.log(event.target)}>
       <div className={cn(styles[`topbar__control`])}>
         <div className={cn(styles[`topbar__column`])}>
           <p className={cn(styles[`topbar__mini-task`])}>Подзадача</p>
           <div className={cn(styles[`topbar__btn`])}>
-            <Button use="createTask" text="Создать" handler={openModalHandler} />
+            <Button use="createTask" text="Создать" handler={openModal} />
           </div>
         </div>
         <div className={cn(styles[`topbar__column`], styles[`topbar__column--last`])}>
