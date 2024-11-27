@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Application-submission-form--React/static/css/main.7bdb16ad.css",
+    "main.js": "/Application-submission-form--React/static/js/main.b234ce74.js",
+    "index.html": "/Application-submission-form--React/index.html",
+    "main.7bdb16ad.css.map": "/Application-submission-form--React/static/css/main.7bdb16ad.css.map",
+    "main.b234ce74.js.map": "/Application-submission-form--React/static/js/main.b234ce74.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bdb16ad.css",
+    "static/js/main.b234ce74.js"
+  ]
+}
