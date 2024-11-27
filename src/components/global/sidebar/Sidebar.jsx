@@ -34,7 +34,8 @@ export default function Sidebar() {
     setIsHidden((prev) => !prev);
   };
 
-  const searchHandler = (inputValue) => {
+  const searchHandler = (e, inputValue) => {
+    e.preventDefault();
     setInputValue(inputValue);
   };
 
